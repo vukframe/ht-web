@@ -1,0 +1,43 @@
+<mat-card fxLayout="row" fxLayoutGap="20px">
+  <form  fxFlex fxLayout="wrap row" fxLayoutGap="20px" >
+    <mat-form-field>
+      <input matInput placeholder="Name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a start date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="endDate" placeholder="Choose a end date">
+      <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+      <mat-datepicker #endDate></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="number" placeholder="Minimum value">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="number" placeholder="Maximum value">
+    </mat-form-field>
+
+
+    <mat-card-actions fxFlex fxLayoutAlign="end end" >
+      <button mat-raised-button>SEARCH</button>
+    </mat-card-actions>
+  </form>
+
+</mat-card>
+
+
+<!--
+    private double value;
+    private CurrencyTypeEntity currencyType;
+    private FlowType flowType;
+    private List<TagEntity> tags;
+    private CategoryEntity category;
+    private Boolean processed;
+    private Boolean automaticProcessing;-->
